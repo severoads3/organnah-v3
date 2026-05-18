@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organnah — Boutique de Saude Natural em Balneario Camboriu</title>
+  <meta name="description" content="Suplementos premium, especiarias gourmet e alimentos funcionais selecionados a dedo. Visite nossa loja em Balneario Camboriu ou fale conosco no WhatsApp.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- ════════════════════════════════════
+       M0 — HEADER
+       ════════════════════════════════════ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg" height="32">
+          <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" fill="#1A3A0A" letter-spacing="0.08em">ORGANNAH</text>
+        </svg>
+      </a>
+      <nav class="header__nav">
+        <a href="#vitrine">A Loja</a>
+        <a href="#categorias">O que temos</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#localizacao">Contato</a>
+      </nav>
+      <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        Falar no WhatsApp
+      </a>
+      <button class="header__hamburger" aria-label="Menu" id="menu-toggle">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+  <nav class="nav-drawer" id="nav-drawer">
+    <div class="nav-drawer__header">
+      <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg" height="28">
+        <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" fill="#1A3A0A" letter-spacing="0.08em">ORGANNAH</text>
+      </svg>
+      <button class="nav-drawer__close" aria-label="Fechar menu" id="menu-close">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="nav-drawer__links">
+      <a href="#vitrine">A Loja</a>
+      <a href="#categorias">O que temos</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#localizacao">Contato</a>
+    </div>
+    <div class="nav-drawer__cta">
+      <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--primary" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════
+       M1 — HERO
+       ════════════════════════════════════ -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="label-caps">Boutique Organica em Balneario Camboriu</span>
+        <h1 class="hero__headline">Tudo para sua saude natural, em um so lugar.</h1>
+        <p class="hero__body">De graos selecionados a suplementos de alta performance. Qualidade que voce ve, sente e confia — com o atendimento que voce merece.</p>
+        <div class="hero__buttons">
+          <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--primary" target="_blank" rel="noopener">
+            <i data-lucide="message-circle"></i>
+            Falar no WhatsApp
+          </a>
+          <a href="#vitrine" class="btn btn--secondary">Conhecer a Loja</a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <i data-lucide="package" class="hero__stat-icon"></i>
+            <div class="hero__stat-content">
+              <span class="hero__stat-number">+150</span>
+              <span class="hero__stat-text">Produtos</span>
+            </div>
+          </div>
+          <div class="hero__stat">
+            <i data-lucide="clock" class="hero__stat-icon"></i>
+            <div class="hero__stat-content">
+              <span class="hero__stat-number">5 anos</span>
+              <span class="hero__stat-text">de historia</span>
+            </div>
+          </div>
+          <div class="hero__stat">
+            <i data-lucide="leaf" class="hero__stat-icon"></i>
+            <div class="hero__stat-content">
+              <span class="hero__stat-number">100%</span>
+              <span class="hero__stat-text">Natural</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="img-placeholder hero__image" data-label="FOTO_LOJA_INTERIOR_01"></div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M2 — TRUST BAR
+       ════════════════════════════════════ -->
+  <section class="trust-bar">
+    <div class="container trust-bar__inner">
+      <div class="trust-bar__item">
+        <i data-lucide="star"></i>
+        <span>5.0 no Google</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <i data-lucide="users"></i>
+        <span>+500 clientes</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <i data-lucide="hand-heart"></i>
+        <span>Atendimento personalizado</span>
+      </div>
+      <div class="trust-bar__divider"></div>
+      <div class="trust-bar__item">
+        <i data-lucide="shield-check"></i>
+        <span>Produtos selecionados a dedo</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M3 — VITRINE IMERSIVA
+       ════════════════════════════════════ -->
+  <section class="vitrine section" id="vitrine">
+    <div class="container">
+      <div class="vitrine__header reveal">
+        <span class="label-caps">Conheca nosso espaco</span>
+        <h2 class="section-headline">Uma experiencia que vai alem do produto.</h2>
+        <p class="section-subtitle">Cada detalhe da loja foi pensado para voce se sentir em casa.</p>
+      </div>
+
+      <div class="vitrine__grid reveal" data-delay="1">
+        <figure class="vitrine__item vitrine__item--a">
+          <div class="img-placeholder" data-label="FOTO_AMBIENTE_01"></div>
+          <figcaption class="vitrine__caption">Ambiente da loja</figcaption>
+        </figure>
+        <figure class="vitrine__item vitrine__item--b">
+          <div class="img-placeholder" data-label="FOTO_PRATELEIRA_01"></div>
+          <figcaption class="vitrine__caption">Prateleiras organizadas</figcaption>
+        </figure>
+        <figure class="vitrine__item vitrine__item--c">
+          <div class="img-placeholder" data-label="FOTO_CLOSE_PRODUTOS"></div>
+          <figcaption class="vitrine__caption">Produtos selecionados</figcaption>
+        </figure>
+      </div>
+
+      <div class="vitrine__bottom-row reveal" data-delay="2">
+        <figure class="vitrine__item">
+          <div class="img-placeholder" data-label="FOTO_GRAOS_01"></div>
+          <figcaption class="vitrine__caption">Graos e sementes</figcaption>
+        </figure>
+        <figure class="vitrine__item">
+          <div class="img-placeholder" data-label="FOTO_BALCAO"></div>
+          <figcaption class="vitrine__caption">Balcao de atendimento</figcaption>
+        </figure>
+      </div>
+
+      <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="vitrine__cta" target="_blank" rel="noopener">
+        Quero conhecer a loja
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M4 — CATEGORIAS
+       ════════════════════════════════════ -->
+  <section class="categorias section" id="categorias">
+    <div class="container">
+      <div class="categorias__header reveal">
+        <span class="label-caps">O que voce encontra aqui</span>
+        <h2 class="section-headline">Curadoria que faz diferenca.</h2>
+        <p class="section-subtitle">Cada categoria foi selecionada com criterio. Sem rotulos genericos, sem produto aleatorio.</p>
+      </div>
+
+      <div class="categorias__grid reveal" data-delay="1">
+        <div class="category-card">
+          <i data-lucide="wheat" class="category-card__icon"></i>
+          <h3 class="category-card__name">Suplementos Premium</h3>
+          <p class="category-card__tagline">Alta performance, marcas que voce confia</p>
+        </div>
+        <div class="category-card">
+          <i data-lucide="sprout" class="category-card__icon"></i>
+          <h3 class="category-card__name">Especiarias Gourmet</h3>
+          <p class="category-card__tagline">Da cozinha ao bem-estar</p>
+        </div>
+        <div class="category-card">
+          <i data-lucide="cherry" class="category-card__icon"></i>
+          <h3 class="category-card__name">Fibras e Sementes</h3>
+          <p class="category-card__tagline">A granel, frescos, do jeito que voce quer</p>
+        </div>
+        <div class="category-card">
+          <i data-lucide="cookie" class="category-card__icon"></i>
+          <h3 class="category-card__name">Snacks Saudaveis</h3>
+          <p class="category-card__tagline">Saudavel sem abrir mao do sabor</p>
+        </div>
+        <div class="category-card">
+          <i data-lucide="cup-soda" class="category-card__icon"></i>
+          <h3 class="category-card__name">Chas Especiais</h3>
+          <p class="category-card__tagline">Rituais diarios que transformam</p>
+        </div>
+        <div class="category-card">
+          <i data-lucide="heart-pulse" class="category-card__icon"></i>
+          <h3 class="category-card__name">Alimentos Funcionais</h3>
+          <p class="category-card__tagline">Ingredientes que a ciencia confirma</p>
+        </div>
+      </div>
+
+      <div class="categorias__cta reveal" data-delay="2">
+        <p class="categorias__cta-text">Tem duvida sobre algum produto?</p>
+        <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--secondary" target="_blank" rel="noopener">
+          Perguntar no WhatsApp
+          <i data-lucide="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M5 — CTA WHATSAPP PRIMARIO
+       ════════════════════════════════════ -->
+  <section class="cta-whatsapp section">
+    <div class="cta-whatsapp__bg">
+      <div class="img-placeholder" data-label="FOTO_BG_CTA"></div>
+      <div class="cta-whatsapp__overlay"></div>
+    </div>
+    <div class="container cta-whatsapp__content reveal">
+      <span class="label-caps">Atendimento direto</span>
+      <h2 class="cta-whatsapp__headline">Tire sua duvida agora. A gente responde na hora.</h2>
+      <p class="cta-whatsapp__body">Nossa equipe esta pronta para ajudar voce a encontrar o produto certo para o seu objetivo.</p>
+      <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--whatsapp-cta" target="_blank" rel="noopener">
+        <i data-lucide="message-circle"></i>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M6 — DEPOIMENTOS
+       ════════════════════════════════════ -->
+  <section class="depoimentos section" id="depoimentos">
+    <div class="container">
+      <div class="depoimentos__header reveal">
+        <span class="label-caps">Depoimentos</span>
+        <h2 class="section-headline">O que nossas clientes dizem</h2>
+        <p class="section-subtitle">Historias reais de quem escolheu viver com mais saude e consciencia.</p>
+      </div>
+
+      <div class="depoimentos__grid reveal" data-delay="1">
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial-card__text">"A loja esta linda demais! O atendimento e super atencioso e esclarecem todas as duvidas. AMEI."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">FL</div>
+            <div class="testimonial-card__info">
+              <span class="testimonial-card__name">Fernanda L.</span>
+              <span class="testimonial-card__label">Cliente</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial-card__text">"Loja linda, amo os temperos e a super aveia para fazer panquecas, delicia!"</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">MS</div>
+            <div class="testimonial-card__info">
+              <span class="testimonial-card__name">Mariana S.</span>
+              <span class="testimonial-card__label">Cliente</span>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="testimonial-card">
+          <div class="testimonial-card__stars">
+            <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+          </div>
+          <p class="testimonial-card__text">"Eu quero morar nesta loja, todos os produtos sao de muita qualidade, variedade infinita."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">CM</div>
+            <div class="testimonial-card__info">
+              <span class="testimonial-card__name">Carlos M.</span>
+              <span class="testimonial-card__label">Cliente</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M7 — LOCALIZACAO
+       ════════════════════════════════════ -->
+  <section class="localizacao section" id="localizacao">
+    <div class="container">
+      <div class="localizacao__header reveal">
+        <span class="label-caps">Como chegar</span>
+        <h2 class="section-headline">Estamos em Balneario Camboriu</h2>
+      </div>
+
+      <div class="localizacao__inner reveal" data-delay="1">
+        <div class="localizacao__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3555.4!2d-48.6356!3d-26.9908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU5JzI3LjAiUyA0OMKwMzgnMDguMiJX!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr"
+            width="100%" height="400" style="border:0; border-radius: var(--radius-xl);"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <div class="localizacao__info">
+          <div class="localizacao__info-item">
+            <i data-lucide="map-pin"></i>
+            <span class="localizacao__info-text">Av. Palestina, 868 — Balneario Camboriu, SC</span>
+          </div>
+          <div class="localizacao__info-item">
+            <i data-lucide="phone"></i>
+            <span class="localizacao__info-text">(47) 9 9848-8535</span>
+          </div>
+          <div class="localizacao__info-item">
+            <i data-lucide="mail"></i>
+            <span class="localizacao__info-text">contato@organnah.com.br</span>
+          </div>
+          <div class="localizacao__info-item">
+            <i data-lucide="clock"></i>
+            <span class="localizacao__info-text">Seg–Sex: 08h–19h · Sab: 08h–18h</span>
+          </div>
+          <div class="localizacao__info-item">
+            <i data-lucide="instagram"></i>
+            <a href="https://www.instagram.com/organnahloja/" target="_blank" rel="noopener" class="localizacao__info-text">@organnahloja</a>
+          </div>
+
+          <div class="localizacao__buttons">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av.+Palestina,+868,+Balneario+Camboriu,+SC" class="btn btn--primary" target="_blank" rel="noopener">
+              <i data-lucide="navigation"></i>
+              Tracar rota
+            </a>
+            <a href="https://www.instagram.com/organnahloja/" class="btn btn--secondary" target="_blank" rel="noopener">
+              <i data-lucide="instagram"></i>
+              Ver no Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       M8 — FOOTER
+       ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <!-- Coluna 1 — Brand -->
+        <div class="footer__brand">
+          <svg viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg" height="30">
+            <text x="0" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" letter-spacing="0.08em">ORGANNAH</text>
+          </svg>
+          <p class="footer__tagline">Boutique de saude natural em Balneario Camboriu. Curadoria exclusiva de suplementos, especiarias e alimentos funcionais premium.</p>
+          <a href="https://www.instagram.com/organnahloja/" class="footer__social" target="_blank" rel="noopener">
+            <i data-lucide="instagram"></i>
+            @organnahloja
+          </a>
+        </div>
+
+        <!-- Coluna 2 — Navegacao -->
+        <div>
+          <p class="footer__column-label">Navegacao</p>
+          <nav class="footer__nav">
+            <a href="#vitrine">A Loja</a>
+            <a href="#categorias">O que temos</a>
+            <a href="#depoimentos">Depoimentos</a>
+            <a href="#localizacao">Contato</a>
+          </nav>
+        </div>
+
+        <!-- Coluna 3 — Contato -->
+        <div>
+          <p class="footer__column-label">Contato</p>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <i data-lucide="map-pin"></i>
+              <span>Av. Palestina, 868 — Balneario Camboriu, SC</span>
+            </div>
+            <div class="footer__contact-item">
+              <i data-lucide="phone"></i>
+              <span>(47) 9 9848-8535</span>
+            </div>
+            <div class="footer__contact-item">
+              <i data-lucide="mail"></i>
+              <span>contato@organnah.com.br</span>
+            </div>
+            <div class="footer__contact-item">
+              <i data-lucide="clock"></i>
+              <span>Seg–Sex: 08h–19h · Sab: 08h–18h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2026 Organnah. Todos os direitos reservados.</span>
+        <span>Qualidade que voce ve, sente e confia.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════
+       FLOAT — WHATSAPP
+       ════════════════════════════════════ -->
+  <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar com a loja no WhatsApp" id="whatsapp-float">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.52 5.842L0 24l6.334-1.496A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.9 0-3.681-.51-5.21-1.4l-.374-.222-3.76.887.922-3.664-.243-.387A9.817 9.817 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+    </svg>
+  </a>
+
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/menu.js" defer></script>
+  <script src="js/whatsapp-float.js" defer></script>
+  <script src="js/scroll-reveal.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+  </script>
+
+</body>
+</html>
