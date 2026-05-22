@@ -39,13 +39,14 @@
 
 .btn--secondary {
   background: transparent;
-  color: var(--color-gray-900);
-  border: 1.5px solid var(--color-gray-900);
+  color: var(--color-gray-700);
+  border: 1.5px solid var(--color-gray-400);
   padding: 12.5px 26.5px;
 }
 .btn--secondary:hover {
-  background: var(--color-gray-900);
-  color: var(--color-white);
+  background: var(--color-gray-50);
+  border-color: var(--color-gray-900);
+  color: var(--color-gray-900);
 }
 
 .btn--whatsapp-cta {
@@ -97,12 +98,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  padding-block: 1rem;
+  height: auto;
 }
 
-.header__logo svg {
-  height: 32px;
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-img {
+  max-height: 32px;
   width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .header__nav {
@@ -253,6 +262,7 @@
   color: var(--color-gray-900);
   line-height: 1.1;
   letter-spacing: -0.02em;
+  text-wrap: balance;
 }
 
 .hero__body {
@@ -375,6 +385,14 @@
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
+}
+.vitrine__item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%);
+  pointer-events: none;
+  z-index: 1;
 }
 .vitrine__item .img-placeholder {
   width: 100%;
@@ -539,6 +557,7 @@
   font-weight: var(--weight-bold);
   color: var(--color-white);
   line-height: 1.15;
+  text-wrap: balance;
 }
 
 .cta-whatsapp__body {
@@ -1175,6 +1194,38 @@
     padding-inline: var(--space-5);
     font-size: 0.6875rem;
   }
+  }
 }
 
+/* ══════════════════════════════════════
+   ABOUT STORE (M6.5)
+   ══════════════════════════════════════ */
+
+.about-store__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+@media (min-width: 1024px) {
+  .about-store__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: center;
+  }
+}
+
+.about-store__text p {
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+  font-size: var(--text-lg);
+}
+
+.about-store__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
 

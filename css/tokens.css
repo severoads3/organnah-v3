@@ -5,6 +5,8 @@
 
 :root {
   /* ── CORES BRAND ── */
+  --color-brand-essencia: #103F27;
+  --color-brand-leveza: #F9EAE1;
   --color-green-900:   #1A3A0A;
   --color-green-700:   #2D5016;
   --color-green-500:   #3D6B20;
@@ -25,6 +27,7 @@
 
   /* ── TIPOGRAFIA ── */
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter Tight', sans-serif;
 
   /* ── ESCALA DE TEXTO ── */
   --text-xs:   0.75rem;
