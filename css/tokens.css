@@ -1,21 +1,31 @@
 /* ═══════════════════════════════════════════
    ORGANNAH — Design Tokens
-   Versão 2.0 | Maio 2026
+   Versão 3.0 | Junho 2026
    ═══════════════════════════════════════════ */
 
 :root {
-  /* ── CORES BRAND ── */
-  --color-brand-essencia: #103F27;
-  --color-brand-leveza: #F9EAE1;
-  --color-green-900:   #1A3A0A;
-  --color-green-700:   #2D5016;
-  --color-green-500:   #3D6B20;
-  --color-green-100:   #EBF2E4;
-  --color-green-50:    #F5FAF2;
+  /* ── BRANDBOOK — Paleta Oficial ── */
+  --color-essencia:   #103F27;   /* Verde profundo — âncora da marca */
+  --color-bem-estar:  #FF9B2D;   /* Laranja vibrante — destaques e CTAs */
+  --color-vitalidade: #B54500;   /* Laranja escuro — urgência e energia */
+  --color-saude:      #6B371E;   /* Marrom quente — solidez e terra */
+  --color-natural:    #466340;   /* Verde médio — equilíbrio */
+  --color-cuidado:    #FDC38C;   /* Pêssego claro — afeto e suavidade */
+  --color-potencia:   #160807;   /* Quase preto — contraste máximo */
+  --color-leveza:     #F9EAE1;   /* Creme rosado — fundos e respiro */
 
-  --color-gold-500:    #C8833A;
-  --color-gold-300:    #E8A55A;
-  --color-gold-100:    #FDF4E7;
+  /* ── ALIASES FUNCIONAIS (mantêm compatibilidade com components.css) ── */
+  --color-brand-essencia: var(--color-essencia);
+  --color-brand-leveza:   var(--color-leveza);
+  --color-green-900:      #1A3A0A;
+  --color-green-700:      var(--color-essencia);
+  --color-green-500:      var(--color-natural);
+  --color-green-100:      #EBF2E4;
+  --color-green-50:       #F5FAF2;
+
+  --color-gold-500:       var(--color-bem-estar);
+  --color-gold-300:       var(--color-cuidado);
+  --color-gold-100:       #FFF4E8;
 
   /* ── NEUTROS ── */
   --color-white:       #FFFFFF;

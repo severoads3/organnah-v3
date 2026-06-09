@@ -814,6 +814,290 @@
 
 
 /* ══════════════════════════════════════
+   BRAND POPUPS — Card de canto (fixed)
+   Popup flutuante no canto inferior esquerdo
+   Ativado por IntersectionObserver no scroll
+   ══════════════════════════════════════ */
+
+/* Trigger invisível — âncora de scroll dentro das seções */
+.balloon-trigger {
+  display: block;
+  height: 1px;
+  pointer-events: none;
+}
+
+/* ── Card base ── */
+.brand-popup {
+  position: fixed;
+  bottom: 108px;       /* acima do botão WhatsApp */
+  left: 28px;
+  width: 320px;
+  max-width: calc(100vw - 56px);
+  background-color: var(--color-essencia);
+  color: var(--color-leveza);
+  border-radius: 20px;
+  padding: 24px 26px 26px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* Linha de acento no topo — cor dourada/bege */
+  border-top: 3px solid var(--color-bem-estar);
+
+  /* Sombra em camadas para profundidade premium */
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.10),
+    0 8px 28px rgba(0, 0, 0, 0.16),
+    0 20px 48px rgba(0, 0, 0, 0.12);
+
+  /* Estado inicial: fora do canto, invisível */
+  opacity: 0;
+  transform: translateX(-16px) translateY(10px) scale(0.97);
+  pointer-events: none;
+
+  /* Transição lenta e suave — 700ms com spring */
+  transition:
+    opacity    700ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform  700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Estado visível */
+.brand-popup.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0) scale(1);
+  pointer-events: all;
+}
+
+/* Saída: mais rápida que a entrada para não obstruir */
+.brand-popup:not(.is-visible) {
+  transition:
+    opacity    400ms cubic-bezier(0.4, 0, 1, 1),
+    transform  400ms cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* ── Variações de tema ── */
+.brand-popup--vitalidade {
+  background-color: var(--color-vitalidade);
+  color: var(--color-leveza);
+  border-top-color: var(--color-cuidado);
+}
+.brand-popup--cuidado {
+  background-color: var(--color-bem-estar);
+  color: var(--color-potencia);
+  border-top-color: var(--color-vitalidade);
+}
+
+/* ── Eyebrow: "EXEMPLO ——" fiel ao brandbook ── */
+.brand-popup__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.5625rem;       /* 9px */
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+.brand-popup__eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+/* ── Texto principal: Inter Tight, tamanho generoso ── */
+.brand-popup__text {
+  font-family: var(--font-body);
+  font-size: 1.125rem;          /* 18px — legível e calmo */
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+
+/* Palavras-chave em negrito como no brandbook */
+.brand-popup__text strong {
+  font-weight: 700;
+}
+
+/* Palavras em itálico para tom inspiracional */
+.brand-popup__text em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ── Headline de destaque: Plus Jakarta Sans ── */
+.brand-popup__headline {
+  font-family: var(--font-sans);
+  font-size: 1.375rem;         /* 22px */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ── Botão fechar ── */
+.brand-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  color: currentColor;
+  opacity: 0.6;
+  font-size: 0.875rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity 150ms ease, background 150ms ease;
+}
+.brand-popup__close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.22);
+}
+/* No tema laranja (--cuidado), o close fica escuro */
+.brand-popup--cuidado .brand-popup__close {
+  background: rgba(0, 0, 0, 0.08);
+}
+.brand-popup--cuidado .brand-popup__close:hover {
+  background: rgba(0, 0, 0, 0.16);
+}
+
+/* ── Mobile ── */
+@media (max-width: 479px) {
+  .brand-popup {
+    left: 16px;
+    right: 16px;
+    bottom: 92px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+ no brandbook */
+  box-shadow:
+    0 4px 24px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.12);
+}
+
+/* Estado visível — acionado pelo JS */
+.brand-popup.is-visible {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+  pointer-events: all;
+}
+
+/* ── Variações de tema ── */
+.brand-popup--vitalidade {
+  background-color: var(--color-vitalidade);
+  color: var(--color-leveza);
+  border-top-color: var(--color-cuidado);
+}
+.brand-popup--cuidado {
+  background-color: var(--color-bem-estar);
+  color: var(--color-potencia);
+  border-top-color: var(--color-vitalidade);
+}
+
+/* ── Eyebrow: "EXEMPLO ——" fiel ao brandbook ── */
+.brand-popup__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.5625rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2px;
+}
+.brand-popup__eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+}
+
+/* ── Texto principal: Inter Tight 18px, line-height generoso ── */
+.brand-popup__text {
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.005em;
+}
+.brand-popup__text strong {
+  font-weight: 700;
+}
+.brand-popup__text em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* ── Headline de destaque: Plus Jakarta Sans bold ── */
+.brand-popup__headline {
+  font-family: var(--font-sans);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* ── Botão fechar: círculo discreto ── */
+.brand-popup__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 50%;
+  color: currentColor;
+  opacity: 0.6;
+  font-size: 0.875rem;
+  cursor: pointer;
+  line-height: 1;
+  transition: opacity 150ms ease, background 150ms ease;
+}
+.brand-popup__close:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.22);
+}
+.brand-popup--cuidado .brand-popup__close {
+  background: rgba(0, 0, 0, 0.08);
+}
+.brand-popup--cuidado .brand-popup__close:hover {
+  background: rgba(0, 0, 0, 0.16);
+}
+
+/* ── Mobile ── */
+@media (max-width: 479px) {
+  .brand-popup {
+    left: 16px;
+    right: 16px;
+    bottom: 92px;
+    width: auto;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
+
+
+/* ══════════════════════════════════════
    FLOAT — WHATSAPP BUTTON
    ══════════════════════════════════════ */
 

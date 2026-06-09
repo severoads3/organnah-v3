@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
@@ -73,7 +73,7 @@
       <div class="hero__content">
         <span class="label-caps">EM BALNEÁRIO CAMBORIÚ</span>
         <h1 class="hero__headline">Tudo para sua saúde natural, em um só lugar.</h1>
-        <p class="hero__body">De grãos selecionados a suplementos de alta performance. Qualidade que você vê, sente e confia — com o atendimento que você merece.</p>
+        <p class="hero__body">De grãos selecionados a suplementos de alta performance. Qualidade que você vê, sente e confia. Com o atendimento que você merece.</p>
         <div class="hero__buttons">
           <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--primary" target="_blank" rel="noopener">
             <i data-lucide="message-circle"></i>
@@ -148,28 +148,30 @@
         <h2 class="section-headline">Uma experiência que vai além do produto.</h2>
         <p class="section-subtitle">Cada detalhe da loja foi pensado para você se sentir em casa.</p>
       </div>
+      <!-- Trigger para o balão 1 -->
+      <span class="balloon-trigger" data-balloon="1" aria-hidden="true"></span>
 
-      <div class="vitrine__grid reveal" data-delay="1">
-        <figure class="vitrine__item vitrine__item--a">
+      <div class="vitrine__grid" data-stagger data-delay="1">
+        <figure class="vitrine__item vitrine__item--a stagger-item">
           <img src="ambiente_01.webp" alt="Tudo para sua performance" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
           <figcaption class="vitrine__caption">Tudo para sua performance</figcaption>
         </figure>
-        <figure class="vitrine__item vitrine__item--b">
+        <figure class="vitrine__item vitrine__item--b stagger-item">
           <img src="prateleira_01.webp" alt="Suplementos e vitaminas" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
           <figcaption class="vitrine__caption">Suplementos e vitaminas</figcaption>
         </figure>
-        <figure class="vitrine__item vitrine__item--c">
+        <figure class="vitrine__item vitrine__item--c stagger-item">
           <img src="close_produtos.webp" alt="Produtos selecionados" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
           <figcaption class="vitrine__caption">Produtos selecionados</figcaption>
         </figure>
       </div>
 
-      <div class="vitrine__bottom-row reveal" data-delay="2">
-        <figure class="vitrine__item">
+      <div class="vitrine__bottom-row" data-stagger data-delay="2">
+        <figure class="vitrine__item stagger-item">
           <img src="graos_01.webp" alt="Variedade de produtos a granel" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy" />
           <figcaption class="vitrine__caption">Variedade de produtos a granel</figcaption>
         </figure>
-        <figure class="vitrine__item">
+        <figure class="vitrine__item stagger-item">
           <img src="foto_balcao.webp" alt="Produtos orgânicos" style="width: 100%; height: 100%; object-fit: cover; object-position: center;" loading="lazy" />
           <figcaption class="vitrine__caption">Produtos orgânicos</figcaption>
         </figure>
@@ -193,34 +195,36 @@
         <h2 class="section-headline">Curadoria que faz diferença.</h2>
         <p class="section-subtitle">Cada categoria foi selecionada com critério. Sem rótulos genéricos, sem produto aleatório.</p>
       </div>
+      <!-- Trigger para o balão 2 -->
+      <span class="balloon-trigger" data-balloon="2" aria-hidden="true"></span>
 
-      <div class="categorias__grid reveal" data-delay="1">
-        <div class="category-card">
+      <div class="categorias__grid" data-stagger data-delay="1">
+        <div class="category-card stagger-item">
           <i data-lucide="wheat" class="category-card__icon"></i>
           <h3 class="category-card__name">Suplementos Premium</h3>
           <p class="category-card__tagline">Alta performance, marcas que você confia</p>
         </div>
-        <div class="category-card">
+        <div class="category-card stagger-item">
           <i data-lucide="sprout" class="category-card__icon"></i>
           <h3 class="category-card__name">Especiarias Gourmet</h3>
           <p class="category-card__tagline">Da cozinha ao bem-estar</p>
         </div>
-        <div class="category-card">
+        <div class="category-card stagger-item">
           <i data-lucide="cherry" class="category-card__icon"></i>
           <h3 class="category-card__name">Fibras e Sementes</h3>
           <p class="category-card__tagline">A granel, frescos, do jeito que você quer</p>
         </div>
-        <div class="category-card">
+        <div class="category-card stagger-item">
           <i data-lucide="cookie" class="category-card__icon"></i>
           <h3 class="category-card__name">Snacks Saudáveis</h3>
           <p class="category-card__tagline">Saudável sem abrir mão do sabor</p>
         </div>
-        <div class="category-card">
+        <div class="category-card stagger-item">
           <i data-lucide="cup-soda" class="category-card__icon"></i>
           <h3 class="category-card__name">Chás Especiais</h3>
           <p class="category-card__tagline">Rituais diários que transformam</p>
         </div>
-        <div class="category-card">
+        <div class="category-card stagger-item">
           <i data-lucide="heart-pulse" class="category-card__icon"></i>
           <h3 class="category-card__name">Alimentos Funcionais</h3>
           <p class="category-card__tagline">Ingredientes que a ciência confirma</p>
@@ -238,6 +242,8 @@
   </section>
 
 
+
+
   <!-- ════════════════════════════════════
        M5 — CTA WHATSAPP PRIMARIO
        ════════════════════════════════════ -->
@@ -246,10 +252,10 @@
       <div class="img-placeholder" data-label="FOTO_BG_CTA"></div>
       <div class="cta-whatsapp__overlay"></div>
     </div>
-    <div class="container cta-whatsapp__content reveal">
+    <div class="container cta-whatsapp__content reveal--scale">
       <span class="label-caps">Atendimento direto</span>
       <h2 class="cta-whatsapp__headline">Tire sua dúvida agora. A gente responde na hora.</h2>
-      <p class="cta-whatsapp__body">Nossa equipe está pronta para ajudar você a encontrar o produto certo para o seu objetivo.</p>
+      <p class="cta-whatsapp__body">Nossa equipe está pronta para ajudar você a encontrar o produto certo. Para o seu objetivo. No seu ritmo.</p>
       <a href="https://wa.me/5547998488535?text=Ol%C3%A1%21+Vi+o+site+e+quero+saber+mais+sobre+os+produtos+da+Organnah." class="btn btn--whatsapp-cta" target="_blank" rel="noopener">
         <i data-lucide="message-circle"></i>
         Chamar no WhatsApp
@@ -268,10 +274,12 @@
         <h2 class="section-headline">O que nossas clientes dizem</h2>
         <p class="section-subtitle">Histórias reais de quem escolheu viver com mais saúde e consciência.</p>
       </div>
+      <!-- Trigger para o balão 3 -->
+      <span class="balloon-trigger" data-balloon="3" aria-hidden="true"></span>
 
-      <div class="depoimentos__grid reveal" data-delay="1">
+      <div class="depoimentos__grid" data-stagger data-delay="1">
         <!-- Card 1 -->
-        <div class="testimonial-card">
+        <div class="testimonial-card stagger-item">
           <div class="testimonial-card__stars">
             <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
           </div>
@@ -285,7 +293,7 @@
           </div>
         </div>
         <!-- Card 2 -->
-        <div class="testimonial-card">
+        <div class="testimonial-card stagger-item">
           <div class="testimonial-card__stars">
             <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
           </div>
@@ -299,7 +307,7 @@
           </div>
         </div>
         <!-- Card 3 -->
-        <div class="testimonial-card">
+        <div class="testimonial-card stagger-item">
           <div class="testimonial-card__stars">
             <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
           </div>
@@ -322,7 +330,7 @@
        ════════════════════════════════════ -->
   <section id="sobre-loja" class="about-store" style="background-color: var(--color-brand-leveza); padding-block: var(--section-y);">
     <div class="container about-store__grid">
-      <div class="about-store__content reveal">
+      <div class="about-store__content reveal--left">
         <span class="label-caps" style="color: var(--color-brand-essencia);">A Nossa Essência</span>
         <h2 class="section-headline" style="color: var(--color-brand-essencia); margin-top: var(--space-4); margin-bottom: var(--space-6);">Um refúgio para viver com leveza e verdade.</h2>
         
@@ -337,7 +345,7 @@
         <a href="#localizacao" class="btn btn--primary" style="margin-top: var(--space-8); background-color: var(--color-brand-essencia);">Visitar a loja física</a>
       </div>
 
-      <div class="about-store__media reveal" data-delay="1">
+      <div class="about-store__media reveal--right">
         <img src="ambiente_01.webp" alt="Interior acolhedor da loja Organnah" loading="lazy" width="600" height="800">
       </div>
     </div>
@@ -479,6 +487,33 @@
       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.121.553 4.112 1.52 5.842L0 24l6.334-1.496A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.9 0-3.681-.51-5.21-1.4l-.374-.222-3.76.887.922-3.664-.243-.387A9.817 9.817 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
     </svg>
   </a>
+
+
+  <!-- ════════════════════════════════════
+       BRAND BALLOONS — Popup de canto
+       3 cards fixed, ativados por trigger de scroll
+       ════════════════════════════════════ -->
+
+  <!-- Card 1: Filosofia — verde profundo -->
+  <div class="brand-popup" id="brand-popup-1" role="complementary" aria-label="Mensagem da marca">
+    <span class="brand-popup__eyebrow">Filosofia</span>
+    <p class="brand-popup__text">A saúde é um caminho. E a beleza está em cada passo do processo.</p>
+    <button class="brand-popup__close" aria-label="Fechar" onclick="this.parentElement.classList.remove('is-visible')">×</button>
+  </div>
+
+  <!-- Card 2: Manifesto — laranja vitalidade -->
+  <div class="brand-popup brand-popup--vitalidade" id="brand-popup-2" role="complementary" aria-label="Mensagem da marca">
+    <span class="brand-popup__eyebrow">Manifesto</span>
+    <p class="brand-popup__headline">DESPERTE SUA VERSÃO MAIS LEVE</p>
+    <button class="brand-popup__close" aria-label="Fechar" onclick="this.parentElement.classList.remove('is-visible')">×</button>
+  </div>
+
+  <!-- Card 3: Cuidado — pêssego cuidado -->
+  <div class="brand-popup brand-popup--cuidado" id="brand-popup-3" role="complementary" aria-label="Mensagem da marca">
+    <span class="brand-popup__eyebrow">Cuidado</span>
+    <p class="brand-popup__text">Cada escolha importa. Cada ingrediente tem um porquê. Cada pessoa tem seu ritmo.</p>
+    <button class="brand-popup__close" aria-label="Fechar" onclick="this.parentElement.classList.remove('is-visible')">×</button>
+  </div>
 
 
   <!-- Scripts -->
